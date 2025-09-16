@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, Star, Users, Zap, Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { PLANS } from "@/lib/stripe"
+import { PLANS } from "@/lib/stripe";
 
 export default function LandingPage() {
   return (
@@ -196,10 +196,11 @@ export default function LandingPage() {
                     href={plan.id === "free" ? "/auth/signup" : "/auth/signin"}
                   >
                     <Button
-                      className={`w-full ${plan.id === "pro"
+                      className={`w-full ${
+                        plan.id === "pro"
                           ? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                           : ""
-                        }`}
+                      }`}
                       variant={plan.id === "free" ? "outline" : "default"}
                     >
                       {plan.id === "free" ? "Começar Grátis" : "Assinar Agora"}
@@ -307,7 +308,7 @@ export default function LandingPage() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Chibi Studio. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Chibi Studio. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
